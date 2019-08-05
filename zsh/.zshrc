@@ -4,7 +4,7 @@ export PATH=$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sb
 eval `/usr/libexec/path_helper -s`
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/lucas/.oh-my-zsh"
+export ZSH="/Users/vienna/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -111,8 +111,3 @@ export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"    # grep, egrep, fgrep
 
 # keg-ruby gems must also be added to PATH
 export PATH="$PATH:/usr/local/lib/ruby/gems/2.6.0/bin"
-
-# Initialize tmux or re-attach to running session
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  tmux attach -t macOS || tmux new -s macOS
-fi
