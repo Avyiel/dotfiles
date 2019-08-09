@@ -26,18 +26,14 @@ alias wk='cd ~/Workspace/'
 alias srv='cd ~/Workspace/services'
 alias dash='cd ~/Workspace/services/dashboard'
 alias core='cd ~/Workspace/services/core-service'
+alias e2e='cd ~/Workspace/integration-tests'
 
-# Ionic
-alias ionsrv='ionic serve'
-alias ionclean='./scripts/clean.sh'
-alias ionconf='./scripts/configure.sh'
-alias cleanconf='cdapp && ./scripts/clean.sh && ./scripts/configure.sh'
+# CodeceptJS
+alias cjs='codeceptjs'
+alias cjsr='codeceptjs run'
 
 # Yarn
 alias yst='yarn start'
-
-# SSH
-alias vmi='ssh sysowner@207.180.248.147'
 
 # ADB
 alias adbd='adb devices'
@@ -45,7 +41,6 @@ alias adbk='adb kill-server'
 alias adbs='adb start-server'
 alias adbks='adb kill-server && adb start-server'
 alias apk="adb -s '2248670c1f037ece' install -r -g $1"
-alias htc10='adb connect 192.168.90.10:5555'
 
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
