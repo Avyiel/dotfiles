@@ -1,9 +1,11 @@
 [user]
 	name = Lucas Vienna
 	email = vienna@edomo.de
+	signingkey = 4B74EE2D70439C47
+
 [commit]
 	template = /Users/lucas/.stCommitMsg
-	gpgsign = false
+	gpgsign = true
 [core]
 	editor = nvim
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
