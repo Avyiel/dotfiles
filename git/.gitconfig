@@ -32,9 +32,6 @@
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 
-[pull]
-	rebase = true
-
 [alias]
 	unstage = reset --soft HEAD^
 	########
