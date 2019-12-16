@@ -16,6 +16,9 @@ alias gkeys='gpg --list-secret-keys --keyid-format LONG'
 alias tree="tree -a -I '.git'"
 alias tmac="tmux attach -t macOS || tmux new -s macOS"
 
+# ssh
+alias edge='ssh -i ~/.ssh/id_rsa root@192.168.1.148'
+
 # ls
 alias ls='ls -GFh'
 alias l='ls -GFhl'
@@ -26,11 +29,11 @@ alias wk='cd ~/Workspace/'
 alias srv='cd ~/Workspace/services'
 alias dash='cd ~/Workspace/services/dashboard'
 alias core='cd ~/Workspace/services/core-service'
-alias e2e='cd ~/Workspace/integration-tests'
+alias e2e='cd ~/Workspace/End-2-End-Tests'
 
 # CodeceptJS
-alias cjs='codeceptjs'
-alias cjsr='codeceptjs run'
+alias cjs='yarn codeceptjs'
+alias cjsr='yarn codeceptjs run'
 
 # Yarn
 alias yst='yarn start'
@@ -40,6 +43,7 @@ alias yl="yarn list --depth=0 2>/dev/null"
 # npm
 alias ng="npm list -g --depth=0 2>/dev/null"
 alias nl="npm list --depth=0 2>/dev/null"
+alias rmnode="rm -rf node_modules"
 
 # ADB
 alias adbd='adb devices'
