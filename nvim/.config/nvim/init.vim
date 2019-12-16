@@ -19,7 +19,8 @@ set noshowmode              " Hide current mode below statusline
 call plug#begin()
 
 " nord-vim colorscheme
-Plug 'arcticicestudio/nord-vim'
+" Plug 'arcticicestudio/nord-vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 " vim-airline for that sweet statusbar
 Plug 'vim-airline/vim-airline'
@@ -69,10 +70,6 @@ call plug#end()
 
 " vim-airline config
 let g:airline_powerline_fonts = 1
-
-" nord theme config
-let g:nord_italic = 1
-let g:nord_italic_comments = 1
 
 " Neomake async hooks
 call neomake#configure#automake('w')
@@ -173,7 +170,7 @@ set t_Co=256
 set termguicolors
 
 " set colorscheme
-colorscheme nord
+colorscheme dracula
 
 " long lines as just one line (have to scroll horizontally)
 set nowrap
@@ -270,3 +267,12 @@ set si
 " (useful for handling the permission-denied error)
 " command W w !sudo -A tee % > /dev/null
 command W w suda://%
+
+" Triger `autoread` when files changes on disk
+" https://unix.stackexchange.com/questions/149209/refresh-changed-content-of-file-opened-in-vim/383044#383044
+" https://vi.stackexchange.com/questions/13692/prevent-focusgained-autocmd-running-in-command-line-editing-mode
+autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
+" Notification after file change
+" https://vi.stackexchange.com/questions/13091/autocmd-event-for-autoread
+autocmd FileChangedShellPost *
+  \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
