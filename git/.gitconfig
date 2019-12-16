@@ -1,7 +1,7 @@
 [user]
 	name = Lucas Vienna
-	email = vienna@edomo.de
-	signingkey = 4B74EE2D70439C47
+	email = l.vienna@deos-ag.com
+	signingKey = 52D621CDA2A228F7BE85F77965399BEE8FC42801
 
 [commit]
 	template = /Users/lucas/.stCommitMsg
@@ -43,3 +43,5 @@
 
 [gpg]
 	program = gpg
+[tag]
+	forceSignAnnotated = true
